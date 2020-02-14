@@ -1,4 +1,4 @@
-require 'ds_watcher/watcher'
+require 'ds_watcher'
 require 'nokogiri'
 
 RSpec.describe DsWatcher do

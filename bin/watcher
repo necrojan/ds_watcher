@@ -1,5 +1,31 @@
 #!/usr/bin/env ruby
 
 require 'ds_watcher'
+require 'optparse'
 
 w = DsWatcher::Watcher.new
+
+option_parser = OptionParser.new do |opt|
+  opt.banner = "Usage: option_parser COMMAND [OPTIONS]"
+  opt.separator ""
+  opt.separator "Commands"
+  opt.separator "  newest: Get the newest chapter"
+  opt.separator ""
+  opt.separator "  recent: Get the recent chapters"
+  opt.separator "Options"
+
+  opt.on("-h", "--help", "help") do
+    puts option_parser
+  end
+end
+
+option_parser.parse!
+
+case ARGV[0]
+when "newest"
+  puts w.new_chapter
+when "recent"
+  puts w.recent_chapters
+else
+  puts option_parser
+end

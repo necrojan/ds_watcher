@@ -1,8 +1,6 @@
 # DsWatcher
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ds_watcher`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A simple gem to check Demon Slayer chapters in your commandline.
 
 ## Installation
 
@@ -22,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To check new chapter
+
+```ruby
+watcher newest
+```
+
+To check recent chapters
+``` ruby
+watcher recent
+```
+
 
 ## Development
 

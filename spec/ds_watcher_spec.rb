@@ -6,17 +6,17 @@ RSpec.describe DsWatcher do
     expect(DsWatcher::VERSION).not_to be nil
   end
 
-  describe '#display_chapter' do
+  describe '#new_chapter' do
     it 'returns an array' do 
       @watcher = DsWatcher::Watcher.new
-      expect(@watcher.display_chapter).to be_a Array
+      expect(@watcher.new_chapter).to be_a Array
     end
   end
 
-  describe '#new_chapter?' do
+  describe '#coming_soon?' do
     it 'should return a boolean' do
       @watcher = DsWatcher::Watcher.new
-      expect(@watcher.new_chapter?).to be(true).or(be(false))
+      expect(@watcher.coming_soon?).to be(true).or(be(false))
     end
   end
 
